@@ -29,6 +29,10 @@ config :kegcopr_api, KegCopRAPI.Web.Endpoint,
 # Do not print debug messages in production
 config :logger, level: :info
 
+# config :kegcopr_api, KegCopRAPI.Repo
+# Note: the configuration settings for the DB
+# ...are stored in prod.secrets.exs
+
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key
@@ -64,7 +68,7 @@ config :logger, level: :info
 # Alternatively, you can configure exactly which server to
 # start per endpoint:
 #
-#     config :kegcopr_api, KegCopRAPI.Web.Endpoint, server: true
+config :kegcopr_api, KegCopRAPI.Web.Endpoint, server: true
 #
 
 # Finally import the config/prod.secret.exs
