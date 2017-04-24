@@ -28,6 +28,7 @@ environment :dev do
 end
 
 environment :prod do
+  # The below line has to be enabled to support hot upgrades.
   set include_erts: true
   set include_src: false
   set cookie: :"J6?HRy!zVPnghbr{t0>tA&WS[2):X!?jXT~/(,lVy^K>obwxy>}iEY.nLa8c~$=C"
@@ -44,4 +45,3 @@ release :kegcopr_api do
     :runtime_tools
   ]
 end
-
