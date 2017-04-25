@@ -34,7 +34,7 @@ config :kegcopr_api, KegCopRAPI.Endpoint,
 config :logger, level: :info
 
 # Load DB settings from env vars on server.
-config :kegcopr_api, KegCopRAPI.Repo
+config :kegcopr_api, KegCopRAPI.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: System.get_env("DB_USERNAME"),
   password: System.get_env("DB_PASSWORD"),
