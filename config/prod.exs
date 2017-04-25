@@ -19,7 +19,7 @@ config :kegcopr_api, KegCopRAPI.Web.Endpoint,
   http: [port: {:system, "PORT"}],
   on_init: {KegCopRAPI.Web.Endpoint, :load_from_system_env, []},
   url: [host: "example.com", port: 80],
-  cache_static_manifest: "priv/static/cache_manifest.json"
+  cache_static_manifest: "priv/static/cache_manifest.json",
 
   # configuration for the Distillery release
   root: ".",
