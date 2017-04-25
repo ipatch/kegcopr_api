@@ -26,10 +26,21 @@ config :kegcopr_api, KegCopRAPI.Web.Endpoint,
   server: true,
   version: Mix.Project.config[:version]
 
+# Load secret key base from env var on server.
+config :kegcopr_api, KegCopRAPI.Endpoint,
+  secret_key_base: System.get_env("SECRET_KEY_BASE")
+
 # Do not print debug messages in production
 config :logger, level: :info
 
-# config :kegcopr_api, KegCopRAPI.Repo
+# Load DB settings from env vars on server.
+config :kegcopr_api, KegCopRAPI.Repo
+  adapter: Ecto.Adapters.Postgres,
+  username: System.get_env("DB_USERNAME"),
+  password: System.get_env("DB_PASSWORD"),
+  database: System.get_env("DB_DATABASE"),
+  hostname: System.get_env("DB_HOSTNAME"),
+  pool_size: 20
 # Note: the configuration settings for the DB
 # ...are stored in prod.secrets.exs
 
@@ -73,4 +84,7 @@ config :kegcopr_api, KegCopRAPI.Web.Endpoint, server: true
 
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
-import_config "prod.secret.exs"
+
+# Note: commented out the below line because importing env vars from this file.
+
+# import_config "prod.secret.exs"
