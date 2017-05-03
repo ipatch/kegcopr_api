@@ -38,6 +38,7 @@ defmodule KegCopRAPI.Web.Endpoint do
     key: "_kegcopr_api_key",
     signing_salt: "vmVWsyQ+"
 
+  plug Corsica, allow_headers: ~w(Accept Content-Type Authorization)
   plug KegCopRAPI.Web.Router
 
   @doc """
