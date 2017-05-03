@@ -20,7 +20,9 @@ defmodule KegCopRAPI.Web.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", KegCopRAPI.Web do
-  #   pipe_through :api
-  # end
+  scope "/api", KegCopRAPI.Web do
+    pipe_through :api
+
+    resources "/users", UserController, except: [:show, :index, :new, :edit]
+  end
 end
