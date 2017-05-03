@@ -36,7 +36,9 @@ defmodule KegCopRAPI.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
-     {:distillery, "~> 1.3"}
+     # User added dependencies.
+     {:distillery, "~> 1.3"},
+     {:comeonin, "~> 3.0"} # 3.0 is appears to be the latest version as of May 3rd 2017
    ]
   end
 
