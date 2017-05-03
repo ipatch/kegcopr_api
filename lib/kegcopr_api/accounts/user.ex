@@ -14,7 +14,7 @@ defmodule KegCopRAPI.Accounts.User do
 
   def changeset(struct, params \\ :empty) do
     struct
-    |> validate_required(params, @required_fields, @optional_fields)
+    |> cast(params, @required_fields, @optional_fields)
     |> validate_format(:email, ~r/@/)
     |> validate_length(:username, min: 1, max: 20)
     |> update_change(:email, &String.downcase/1)
