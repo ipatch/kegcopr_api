@@ -3,12 +3,14 @@ defmodule KegCopRAPI.Repo.Migrations.CreateKegCopRAPI.Accounts.User do
 
   def change do
     create table(:accounts_users) do
-      add :email, :string
+      add :username, :string, null: false
+      add :email, :string, null: false
       add :encrypted_password, :string
-      add :username, :string
 
       timestamps()
     end
 
+    create unique_index(:users, [:email])
+    create unique_index(:users, [:username])
   end
 end
