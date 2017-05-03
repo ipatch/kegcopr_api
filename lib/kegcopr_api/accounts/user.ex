@@ -13,7 +13,7 @@ defmodule KegCopRAPI.Accounts.User do
     timestamps()
   end
 
-  @required_fields ~w(email encrypted_password username)
+  @required_fields ~w(email username)
   @optional_fields ~w()
 
   def changeset(struct, params \\ :empty) do
