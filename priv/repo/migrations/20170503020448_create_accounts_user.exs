@@ -10,7 +10,7 @@ defmodule KegCopRAPI.Repo.Migrations.CreateKegCopRAPI.Accounts.User do
       timestamps()
     end
 
-    create unique_index(:users, [:email])
-    create unique_index(:users, [:username])
+    create unique_index(:accounts_users, [:email])
+    create unique_index(:accounts_users, [:username])
   end
 end
