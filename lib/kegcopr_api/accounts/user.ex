@@ -8,6 +8,7 @@ defmodule KegCopRAPI.Accounts.User do
     field :email, :string
     field :encrypted_password, :string
     field :username, :string
+    field :password, :string, virtual: true
 
     timestamps()
   end
