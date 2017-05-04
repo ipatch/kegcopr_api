@@ -13,15 +13,10 @@ defmodule KegCopRAPI.Accounts.User do
     timestamps()
   end
 
-  @required_fields ~w(email username)
-  @optional_fields ~w()
-
   def changeset(struct, params \\ :empty) do
     struct
-    |> cast(params, @required_fields, @optional_fields)
-    |> validate_required(@required_fields, @optional_fields)
-    # |> cast(params, [:email, :encrypted_password, :username])
-    # |> validate_required([:email, :encrypted_password, :username])
+    |> cast(params, [:username, :email])
+    |> validate_required([:username, :email])
     |> validate_format(:email, ~r/@/)
     |> validate_length(:username, min: 1, max: 20)
     |> update_change(:email, &String.downcase/1)
@@ -33,8 +28,8 @@ defmodule KegCopRAPI.Accounts.User do
   def registration_changeset(struct, params) do
     struct
     |> changeset(params)
-    |> cast(params, ~w(password), [])
-    |> validate_required(~w(password), [])
+    |> cast(params, [:password])
+    |> validate_required([:password])
     |> validate_length(:password, min: 6, max: 100) |> put_encrypted_pw
   end
 
