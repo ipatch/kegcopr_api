@@ -11,8 +11,8 @@ defmodule KegCopRAPI.Web.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
-    plug Guardian.Plug.VerifyHeader, realm: "Bearer"
-    plug Guardian.Plug.LoadResource
+    # plug Guardian.Plug.VerifyHeader, realm: "Bearer"
+    # plug Guardian.Plug.LoadResource
   end
 
   scope "/", KegCopRAPI.Web do
@@ -28,7 +28,7 @@ defmodule KegCopRAPI.Web.Router do
     post "/sessions", SessionController, :create
     delete "/sessions", SessionController, :delete
     post "sessions/refresh", SessionController, :refresh
-    
+
     resources "/users", UserController, except: [:show, :index, :new, :edit]
   end
 end
