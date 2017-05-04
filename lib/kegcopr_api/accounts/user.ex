@@ -30,7 +30,8 @@ defmodule KegCopRAPI.Accounts.User do
     |> changeset(params)
     |> cast(params, [:password])
     |> validate_required([:password])
-    |> validate_length(:password, min: 6, max: 100) |> put_encrypted_pw
+    |> validate_length(:password, min: 6, max: 100)
+    |> put_encrypted_pw
   end
 
   defp put_encrypted_pw(changeset) do
