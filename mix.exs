@@ -28,7 +28,9 @@ defmodule KegCopRAPI.Mixfile do
   #
   # Type `mix help deps` for examples and options.
   defp deps do
-    [{:phoenix, "~> 1.3.0-rc"},
+    # see the below mentioned github issue why override: true is set.
+    # https://github.com/ueberauth/guardian/issues/273
+    [{:phoenix, "~> 1.3.0-rc", override: true},
      {:phoenix_pubsub, "~> 1.0"},
      {:phoenix_ecto, "~> 3.2"},
      {:postgrex, ">= 0.0.0"},
@@ -39,7 +41,8 @@ defmodule KegCopRAPI.Mixfile do
      # User added dependencies.
      {:distillery, "~> 1.3"},
      {:comeonin, "~> 3.0"}, # 3.0 is appears to be the latest version as of May 3rd 2017
-     {:corsica, "~> 0.5.0"} # latest as of May 3rd 2017
+     {:corsica, "~> 0.5.0"}, # latest as of May 3rd 2017
+     {:guardian, "~> 0.14.2"} # latest as of May 3rd 2017
    ]
   end
 

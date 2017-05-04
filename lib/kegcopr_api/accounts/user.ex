@@ -34,6 +34,7 @@ defmodule KegCopRAPI.Accounts.User do
     struct
     |> changeset(params)
     |> cast(params, ~w(password), [])
+    |> validate_required(~w(password), [])
     |> validate_length(:password, min: 6, max: 100) |> put_encrypted_pw
   end
 
