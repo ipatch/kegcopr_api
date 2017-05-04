@@ -55,3 +55,6 @@ config :kegcopr_api, KegCopRAPI.Repo,
   database: "kegcopr_api_dev",
   hostname: "localhost",
   pool_size: 10
+
+config :guardian, Guardian,
+  secret_key: "H2PEn86P7xUFrH6NlfD6rEJiST2BnzlDiXJTlcSxDfULj12j/e9yP+lxOkIWltwX"
