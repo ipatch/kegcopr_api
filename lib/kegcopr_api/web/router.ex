@@ -11,7 +11,7 @@ defmodule KegCopRAPI.Web.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
-    # plug Guardian.Plug.VerifyHeader, realm: "Bearer"
+    plug Guardian.Plug.VerifyHeader, realm: "Bearer"
     # plug Guardian.Plug.LoadResource
   end
 
