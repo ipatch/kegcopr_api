@@ -11,9 +11,11 @@ defmodule KegCopRAPI.Web.UserView do
   end
 
   def render("user.json", %{user: user}) do
-    %{id: user.id,
+    %{
+      id: user.id,
       email: user.email,
       # encrypted_password: user.encrypted_password,
-      username: user.username}
+      username: user.username
+    }
   end
 end
