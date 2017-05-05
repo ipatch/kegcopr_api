@@ -27,7 +27,7 @@ defmodule KegCopRAPI.Web.Router do
 
     post "/sessions", SessionController, :create
     delete "/sessions", SessionController, :delete
-    post "sessions/refresh", SessionController, :refresh
+    post "/sessions/refresh", SessionController, :refresh
 
     resources "/users", UserController, except: [:show, :index, :new, :edit]
   end
