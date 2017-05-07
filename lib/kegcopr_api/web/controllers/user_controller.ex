@@ -1,6 +1,9 @@
 defmodule KegCopRAPI.Web.UserController do
   use KegCopRAPI.Web, :controller
 
+  # import Ecto.Changeset
+  alias KegCopRAPI.Repo
+
   alias KegCopRAPI.Accounts
   alias KegCopRAPI.Accounts.User
 
