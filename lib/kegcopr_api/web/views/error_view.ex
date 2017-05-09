@@ -1,5 +1,5 @@
-defmodule KegCopRAPI.Web.ErrorView do
-  use KegCopRAPI.Web, :view
+defmodule KegCopRAPI.ErrorView do
+  # use KegCopRAPI.Web, :view
 
   def render("404.html", _assigns) do
     "Page not found"

@@ -1,5 +1,6 @@
 defmodule KegCopRAPI.SessionView do
-  use KegCopRAPI.Web, :view
+  # use KegCopRAPI.Web, :view
+  use KegCopRAPI.UserView
 
   def render("show.json", %{user: user, jwt: jwt}) do
     %{
