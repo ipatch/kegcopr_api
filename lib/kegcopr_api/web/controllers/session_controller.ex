@@ -1,5 +1,7 @@
 defmodule KegCopRAPI.SessionController do
   use KegCopRAPI.Web, :controller
+  # Note: the below statement squelched the warning about not finding the Repo.
+  alias KegCopRAPI.Repo
 
   def create(conn, params) do
     case authenticate(params) do
