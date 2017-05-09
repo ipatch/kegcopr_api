@@ -1,11 +1,11 @@
-defmodule KegCopRAPI.Web.ChangesetView do
+defmodule KegCopRAPI.ChangesetView do
   use KegCopRAPI.Web, :view
 
   @doc """
   Traverses and translates changeset errors.
 
   See `Ecto.Changeset.traverse_errors/2` and
-  `KegCopRAPI.Web.ErrorHelpers.translate_error/1` for more details.
+  `MyApp.ErrorHelpers.translate_error/1` for more details.
   """
   def translate_errors(changeset) do
     Ecto.Changeset.traverse_errors(changeset, &translate_error/1)
