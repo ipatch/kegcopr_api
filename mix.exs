@@ -30,6 +30,7 @@ defmodule KegCopRAPI.Mixfile do
   defp deps do
     # see the below mentioned github issue why override: true is set.
     # https://github.com/ueberauth/guardian/issues/273
+    # Note: see `mix.lock` for which RC version of phx project is using.
     [{:phoenix, "~> 1.3.0-rc", override: true},
      {:phoenix_pubsub, "~> 1.0"},
      {:phoenix_ecto, "~> 3.2"},
