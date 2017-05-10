@@ -1,5 +1,5 @@
 defmodule KegCopRAPI.UserView do
-  # use KegCopRAPI.Web, :view
+  use KegCopRAPI.Web, :view
   # alias KegCopRAPI.UserView
 
   # def render("index.json", %{users: users}) do
