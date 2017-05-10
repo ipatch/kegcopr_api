@@ -1,4 +1,4 @@
-defmodule KegCopRAPI.UserView do
+defmodule KegCopRAPI.Web.UserView do
   use KegCopRAPI.Web, :view
   # alias KegCopRAPI.UserView
 

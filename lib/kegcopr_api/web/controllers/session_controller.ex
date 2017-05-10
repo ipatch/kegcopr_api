@@ -1,4 +1,4 @@
-defmodule KegCopRAPI.SessionController do
+defmodule KegCopRAPI.Web.SessionController do
   use KegCopRAPI.Web, :controller
   # Note: the below statement squelched the warning about not finding the Repo.
   alias KegCopRAPI.Repo
