@@ -12,6 +12,8 @@ defmodule KegCopRAPI.Mixfile do
      deps: deps()]
   end
 
+  #test
+
   # Configuration for the OTP application.
   #
   # Type `mix help compile.app` for more information.
