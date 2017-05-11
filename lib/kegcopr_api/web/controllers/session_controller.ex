@@ -2,6 +2,7 @@ defmodule KegCopRAPI.Web.SessionController do
   use KegCopRAPI.Web, :controller
   # Note: the below statement squelched the warning about not finding the Repo.
   alias KegCopRAPI.Repo
+  alias KegCopRAPI.Accounts.User
 
   def create(conn, params) do
     case authenticate(params) do
@@ -52,7 +53,7 @@ defmodule KegCopRAPI.Web.SessionController do
   end
 
   defp authenticate(%{"email" => email, "password" => password}) do
-    user = Repo.get_by(KegCopRAPI.User, email: String.downcase(email))
+    user = Repo.get_by(KegCopRAPI.Accounts.User, email: String.downcase(email))
 
     case check_password(user, password) do
       true -> {:ok, user}
