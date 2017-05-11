@@ -1,4 +1,4 @@
-defmodule KegCopRAPI.SessionView do
+defmodule KegCopRAPI.Web.SessionView do
   use KegCopRAPI.Web, :view
   # use KegCopRAPI.UserView, :view
 

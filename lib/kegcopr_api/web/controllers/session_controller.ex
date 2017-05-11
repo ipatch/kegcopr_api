@@ -2,7 +2,7 @@ defmodule KegCopRAPI.Web.SessionController do
   use KegCopRAPI.Web, :controller
   # Note: the below statement squelched the warning about not finding the Repo.
   alias KegCopRAPI.Repo
-  alias KegCopRAPI.Accounts.User
+  # alias KegCopRAPI.Accounts.User
 
   def create(conn, params) do
     case authenticate(params) do
@@ -64,7 +64,7 @@ defmodule KegCopRAPI.Web.SessionController do
   defp check_password(user, password) do
     case user do
       nil -> Comeonin.Bcrypt.dummy_checkpw()
-      _ -> Comeonin.Bcrypt.checkpw(password, user.password_hash)
+      _ -> Comeonin.Bcrypt.checkpw(password, user.encrypted_password)
     end
   end
 end
