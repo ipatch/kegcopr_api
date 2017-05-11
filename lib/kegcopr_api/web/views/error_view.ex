@@ -1,4 +1,4 @@
-defmodule KegCopRAPI.ErrorView do
+defmodule KegCopRAPI.Web.ErrorView do
   # use KegCopRAPI.Web, :view
 
   def render("404.html", _assigns) do
