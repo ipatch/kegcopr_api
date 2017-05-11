@@ -40,7 +40,8 @@ defmodule KegCopRAPI.Mixfile do
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
      # User added dependencies.
-     {:distillery, "~> 1.3"},
+     {:distillery, "~> 1.4"},
+     {:gatling, "~> 1.0"},
      {:comeonin, "~> 3.0"}, # 3.0 is appears to be the latest version as of May 3rd 2017
      {:corsica, "~> 0.5.0"}, # latest as of May 3rd 2017
      {:guardian, "~> 0.14.2"}, # latest as of May 3rd 2017
