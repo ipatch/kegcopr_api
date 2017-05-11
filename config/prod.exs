@@ -31,7 +31,13 @@ config :kegcopr_api, KegCopRAPI.Endpoint,
   secret_key_base: System.get_env("SECRET_KEY_BASE")
 
 # Do not print debug messages in production
-config :logger, level: :info
+# config :logger, level: :info
+config :logger, format: "[$level] $message\n",
+  backends: [{LoggerFileBackend, :error_log}, :console]
+
+config :logger, :error_log,
+  path: "log/error.log",
+  level: :error
 
 # Load DB settings from env vars on server.
 config :kegcopr_api, KegCopRAPI.Repo,
@@ -83,14 +89,6 @@ config :kegcopr_api, KegCopRAPI.Web.Endpoint, server: true
 #
 config :guardian, Guardian,
   secret_key: System.get_env("GUARDIAN_SECRET_KEY")
-
-config :logger, format: "[$level] $message\n",
-  backends: [{LoggerFileBackend, :error_log}, :console]
-
-config :logger, :error_log,
-  path: "log/error.log",
-  level: :error
-
 
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
