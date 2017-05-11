@@ -4,7 +4,7 @@ defmodule KegCopRAPI.Web.UserController do
   # import Ecto.Changeset
   alias KegCopRAPI.Repo
 
-  alias KegCopRAPI.Accounts
+  # alias KegCopRAPI.Accounts
   alias KegCopRAPI.Accounts.User
 
   action_fallback KegCopRAPI.Web.FallbackController
