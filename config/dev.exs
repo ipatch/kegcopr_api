@@ -58,3 +58,10 @@ config :kegcopr_api, KegCopRAPI.Repo,
 
 config :guardian, Guardian,
   secret_key: "H2PEn86P7xUFrH6NlfD6rEJiST2BnzlDiXJTlcSxDfULj12j/e9yP+lxOkIWltwX"
+
+config :logger, format: "[$level] $message\n",
+  backends: [{LoggerFileBackend, :error_log}, :console]
+
+config :logger, :error_log,
+  path: "log/error.log",
+  level: :error

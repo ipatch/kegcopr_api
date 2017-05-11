@@ -47,7 +47,8 @@ defmodule KegCopRAPI.Mixfile do
      {:comeonin, "~> 3.0"}, # 3.0 is appears to be the latest version as of May 3rd 2017
      {:corsica, "~> 0.5.0"}, # latest as of May 3rd 2017
      {:guardian, "~> 0.14.2"}, # latest as of May 3rd 2017
-     {:cors_plug, "~> 1.2"} # latest as of May 5th 2017
+     {:cors_plug, "~> 1.2"}, # latest as of May 5th 2017
+     {:logger_file_backend, "~> 0.0.9"}
    ]
   end
 
