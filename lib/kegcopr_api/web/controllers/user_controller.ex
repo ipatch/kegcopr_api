@@ -28,7 +28,7 @@ defmodule KegCopRAPI.Web.UserController do
         # |> render("show.json", user: user)
         new_conn
         |> put_status(:created)
-        |> render(KegCopRAPI.SessionView, "show.json", user: user, jwt: jwt)
+        |> render(KegCopRAPI.Web.SessionView, "show.json", user: user, jwt: jwt)
       {:error, changeset} ->
         conn
         |> put_status(:unprocessable_entity)
