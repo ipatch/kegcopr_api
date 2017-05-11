@@ -30,6 +30,10 @@ config :guardian, Guardian,
   verify_issuer: true,
   serializer: KegCopRAPI.GuardianSerializer
 
+# configure distillery
+config :distillery,
+  no_warn_missing: true
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
