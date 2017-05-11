@@ -3,6 +3,7 @@ defmodule KegCopRAPI.Accounts.User do
   # import Ecto
   import Ecto.Changeset
   # import Ecto.Query
+  # alias KegCopRAPI.Accounts.User
 
   schema "accounts_users" do
     field :email, :string
