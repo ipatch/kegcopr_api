@@ -28,7 +28,7 @@ config :logger,
 # configuration for the {LoggerFileBackend, :error_log} backend
 config :logger, :error_log,
   # path: "/home/deploy/deployments/kegcopr_api/error.log",
-  path: "/tmp/kegcopr_api-error.log"
+  path: "/tmp/kegcopr_api-error.log",
   level: :error
 
 # configure guardian
