@@ -32,12 +32,12 @@ config :kegcopr_api, KegCopRAPI.Endpoint,
 
 # Do not print debug messages in production
 # config :logger, level: :info
-config :logger, format: "[$level] $message\n",
-  backends: [{LoggerFileBackend, :error_log}, :console]
-
-config :logger, :error_log,
-  path: "/home/deploy/deployments/kegcopr_api/error.log",
-  level: :error
+# config :logger, format: "[$level] $message\n",
+#   backends: [{LoggerFileBackend, :error_log}, :console]
+#
+# config :logger, :error_log,
+#   path: "/home/deploy/deployments/kegcopr_api/error.log",
+#   level: :error
 
 # Load DB settings from env vars on server.
 config :kegcopr_api, KegCopRAPI.Repo,

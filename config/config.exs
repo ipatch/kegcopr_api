@@ -19,14 +19,16 @@ config :kegcopr_api, KegCopRAPI.Web.Endpoint,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
-config :logger, :console,
-  backends: [{LoggerFileBackend, :error_log}]
+config :logger,
+  backends: [:console, {LoggerFileBackend, :error_log}],
+  format: "[$level] $message\n"
   # format: "$time $metadata[$level] $message\n",
   # metadata: [:request_id]
 
 # configuration for the {LoggerFileBackend, :error_log} backend
 config :logger, :error_log,
-  path: "/home/deploy/deployments/kegcopr_api/error.log",
+  # path: "/home/deploy/deployments/kegcopr_api/error.log",
+  path: "/tmp/kegcopr_api-error.log"
   level: :error
 
 # configure guardian
