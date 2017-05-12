@@ -45,7 +45,7 @@ config :logger, :console, format: "[$level] $message\n",
   backends: [{LoggerFileBackend, :error_log}, :console]
 
 config :logger, :error_log,
-  path: "log/error.log",
+  path: "/opt/elixir/kegcopr_api/log/error.log",
   level: :error
 
 # Set a higher stacktrace during development. Avoid configuring such

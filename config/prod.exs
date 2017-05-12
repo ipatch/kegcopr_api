@@ -36,7 +36,7 @@ config :logger, format: "[$level] $message\n",
   backends: [{LoggerFileBackend, :error_log}, :console]
 
 config :logger, :error_log,
-  path: "log/error.log",
+  path: "/home/deploy/deployments/kegcopr_api/error.log",
   level: :error
 
 # Load DB settings from env vars on server.
